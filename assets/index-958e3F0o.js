@@ -1,4 +1,4 @@
-(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))a(s);new MutationObserver(s=>{for(const e of s)if(e.type==="childList")for(const n of e.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&a(n)}).observe(document,{childList:!0,subtree:!0});function l(s){const e={};return s.integrity&&(e.integrity=s.integrity),s.referrerPolicy&&(e.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?e.credentials="include":s.crossOrigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function a(s){if(s.ep)return;s.ep=!0;const e=l(s);fetch(s.href,e)}})();function r(){const t=document.getElementById("app");if(!t){console.error("App element not found");return}t.innerHTML=`
+(function(){const n=document.createElement("link").relList;if(n&&n.supports&&n.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const o of t.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&r(o)}).observe(document,{childList:!0,subtree:!0});function l(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function r(e){if(e.ep)return;e.ep=!0;const t=l(e);fetch(e.href,t)}})();function h(){const c=document.getElementById("app");if(!c){console.error("App element not found");return}c.innerHTML=`
     <div class="noise-bg min-h-screen">
       <!-- Navigation -->
       <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4 md:px-12">
@@ -870,6 +870,7 @@
               <ul class="space-y-3 text-sm text-snip-muted">
                 <li><a href="#quickstart" class="hover:text-snip-orange transition-colors">快速上手</a></li>
                 <li><a href="#changelog" class="hover:text-snip-orange transition-colors">更新日志</a></li>
+                <li><a href="https://github.com/jhonsmithsamsmith/SniShaper/wiki" target="_blank" class="hover:text-snip-orange transition-colors">使用文档 Wiki</a></li>
               </ul>
             </div>
             
@@ -888,7 +889,9 @@
             <p>
               合作者 | 贡献者 | 网页开发者: dongle
             </p>
-            <p class="mt-2 opacity-30" style="font-size: 10px;">原作者因不可抗拒原因无法展出</p>
+            <p class="mt-3 opacity-25 leading-relaxed" style="font-size: 10px; max-width: 480px; margin-left: auto; margin-right: auto;">
+              原作者因某群体的无下限污蔑、信息曝光和圈层共振，已退出开发工作。仓库已移交给一位社区开发者继续维护。
+            </p>
           </div>
         </div>
       </footer>
@@ -905,103 +908,5 @@
         <a href="#faq" class="text-2xl font-medium hover:text-snip-orange transition-colors mobile-link">常见问题</a>
         <a href="#download" class="text-2xl font-medium hover:text-snip-orange transition-colors mobile-link">下载</a>
       </div>
-      
-      <script>
-        // Mobile menu functionality
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuClose = document.getElementById('mobile-menu-close');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        
-        function openMobileMenu() {
-          mobileMenu.classList.remove('hidden');
-          mobileMenu.classList.add('flex');
-          document.body.style.overflow = 'hidden';
-        }
-        
-        function closeMobileMenu() {
-          mobileMenu.classList.add('hidden');
-          mobileMenu.classList.remove('flex');
-          document.body.style.overflow = '';
-        }
-        
-        mobileMenuBtn?.addEventListener('click', openMobileMenu);
-        mobileMenuClose?.addEventListener('click', closeMobileMenu);
-        mobileLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
-        
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-          anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-          });
-        });
-        
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-          threshold: 0.1,
-          rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('opacity-100', 'translate-y-0');
-              entry.target.classList.remove('opacity-0', 'translate-y-8');
-            }
-          });
-        }, observerOptions);
-        
-        document.querySelectorAll('section').forEach(section => {
-          section.classList.add('transition-opacity', 'transition-transform', 'duration-700');
-          observer.observe(section);
-        });
-
-        // Auto-scroll for features carousel (back and forth)
-        (function () {
-          const carousel = document.getElementById('features-carousel');
-          if (!carousel) return;
-
-          const BASE_SPEED = 0.65;
-          let speed = 0;
-          let direction = 1;   // 1 = left→right, -1 = right→left
-          let paused = false;
-          let raf = null;
-
-          function getMaxScroll() {
-            return carousel.scrollWidth - carousel.clientWidth;
-          }
-
-          function tick() {
-            if (!paused) {
-              speed += (BASE_SPEED - speed) * 0.08;
-              carousel.scrollLeft += speed * direction;
-
-              const max = getMaxScroll();
-              if (direction === 1 && carousel.scrollLeft >= max) {
-                direction = -1;
-                carousel.scrollLeft = max;
-              } else if (direction === -1 && carousel.scrollLeft <= 0) {
-                direction = 1;
-                carousel.scrollLeft = 0;
-              }
-            }
-            raf = requestAnimationFrame(tick);
-          }
-
-          carousel.addEventListener('mouseenter', () => { paused = true; speed = 0; });
-          carousel.addEventListener('mouseleave', () => { paused = false; });
-          carousel.addEventListener('touchstart', () => { paused = true;  speed = 0; }, { passive: true });
-          carousel.addEventListener('touchend',   () => { paused = false; }, { passive: true });
-
-          carousel.style.scrollSnapType = 'none';
-          carousel.style.overflowX = 'hidden';
-
-          raf = requestAnimationFrame(tick);
-        })();
-      <\/script>
     </div>
-  `}document.addEventListener("DOMContentLoaded",()=>{r()});
+  `;const n=document.getElementById("mobile-menu-btn"),l=document.getElementById("mobile-menu"),r=document.getElementById("mobile-menu-close"),e=document.querySelectorAll(".mobile-link");function t(){l.classList.remove("hidden"),l.classList.add("flex"),document.body.style.overflow="hidden"}function o(){l.classList.add("hidden"),l.classList.remove("flex"),document.body.style.overflow=""}n==null||n.addEventListener("click",t),r==null||r.addEventListener("click",o),e.forEach(s=>s.addEventListener("click",o)),document.querySelectorAll('a[href^="#"]').forEach(s=>{s.addEventListener("click",function(a){a.preventDefault();const i=document.querySelector(this.getAttribute("href"));i&&i.scrollIntoView({behavior:"smooth",block:"start"})})});const v={threshold:.1,rootMargin:"0px 0px -50px 0px"},m=new IntersectionObserver(s=>{s.forEach(a=>{a.isIntersecting&&(a.target.classList.add("opacity-100","translate-y-0"),a.target.classList.remove("opacity-0","translate-y-8"))})},v);document.querySelectorAll("section").forEach(s=>{s.classList.add("transition-opacity","transition-transform","duration-700"),m.observe(s)}),(function(){const s=document.getElementById("features-carousel");if(!s)return;const a=.65;let i=0,d=1,p=!1;function u(){return s.scrollWidth-s.clientWidth}function x(){if(!p){i+=(a-i)*.08,s.scrollLeft+=i*d;const g=u();d===1&&s.scrollLeft>=g?(d=-1,s.scrollLeft=g):d===-1&&s.scrollLeft<=0&&(d=1,s.scrollLeft=0)}requestAnimationFrame(x)}s.addEventListener("mouseenter",()=>{p=!0,i=0}),s.addEventListener("mouseleave",()=>{p=!1}),s.addEventListener("touchstart",()=>{p=!0,i=0},{passive:!0}),s.addEventListener("touchend",()=>{p=!1},{passive:!0}),s.style.scrollSnapType="none",s.style.overflowX="hidden",requestAnimationFrame(x)})()}document.addEventListener("DOMContentLoaded",()=>{h()});

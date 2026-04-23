@@ -878,6 +878,7 @@ export function initApp(): void {
               <ul class="space-y-3 text-sm text-snip-muted">
                 <li><a href="#quickstart" class="hover:text-snip-orange transition-colors">快速上手</a></li>
                 <li><a href="#changelog" class="hover:text-snip-orange transition-colors">更新日志</a></li>
+                <li><a href="https://github.com/jhonsmithsamsmith/SniShaper/wiki" target="_blank" class="hover:text-snip-orange transition-colors">使用文档 Wiki</a></li>
               </ul>
             </div>
             
@@ -896,7 +897,9 @@ export function initApp(): void {
             <p>
               合作者 | 贡献者 | 网页开发者: dongle
             </p>
-            <p class="mt-2 opacity-30" style="font-size: 10px;">原作者因不可抗拒原因无法展出</p>
+            <p class="mt-3 opacity-25 leading-relaxed" style="font-size: 10px; max-width: 480px; margin-left: auto; margin-right: auto;">
+              原作者因某群体的无下限污蔑、信息曝光和圈层共振，已退出开发工作。仓库已移交给一位社区开发者继续维护。
+            </p>
           </div>
         </div>
       </footer>
@@ -913,104 +916,93 @@ export function initApp(): void {
         <a href="#faq" class="text-2xl font-medium hover:text-snip-orange transition-colors mobile-link">常见问题</a>
         <a href="#download" class="text-2xl font-medium hover:text-snip-orange transition-colors mobile-link">下载</a>
       </div>
-      
-      <script>
-        // Mobile menu functionality
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuClose = document.getElementById('mobile-menu-close');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        
-        function openMobileMenu() {
-          mobileMenu.classList.remove('hidden');
-          mobileMenu.classList.add('flex');
-          document.body.style.overflow = 'hidden';
-        }
-        
-        function closeMobileMenu() {
-          mobileMenu.classList.add('hidden');
-          mobileMenu.classList.remove('flex');
-          document.body.style.overflow = '';
-        }
-        
-        mobileMenuBtn?.addEventListener('click', openMobileMenu);
-        mobileMenuClose?.addEventListener('click', closeMobileMenu);
-        mobileLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
-        
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-          anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-          });
-        });
-        
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-          threshold: 0.1,
-          rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('opacity-100', 'translate-y-0');
-              entry.target.classList.remove('opacity-0', 'translate-y-8');
-            }
-          });
-        }, observerOptions);
-        
-        document.querySelectorAll('section').forEach(section => {
-          section.classList.add('transition-opacity', 'transition-transform', 'duration-700');
-          observer.observe(section);
-        });
-
-        // Auto-scroll for features carousel (back and forth)
-        (function () {
-          const carousel = document.getElementById('features-carousel');
-          if (!carousel) return;
-
-          const BASE_SPEED = 0.65;
-          let speed = 0;
-          let direction = 1;   // 1 = left→right, -1 = right→left
-          let paused = false;
-          let raf = null;
-
-          function getMaxScroll() {
-            return carousel.scrollWidth - carousel.clientWidth;
-          }
-
-          function tick() {
-            if (!paused) {
-              speed += (BASE_SPEED - speed) * 0.08;
-              carousel.scrollLeft += speed * direction;
-
-              const max = getMaxScroll();
-              if (direction === 1 && carousel.scrollLeft >= max) {
-                direction = -1;
-                carousel.scrollLeft = max;
-              } else if (direction === -1 && carousel.scrollLeft <= 0) {
-                direction = 1;
-                carousel.scrollLeft = 0;
-              }
-            }
-            raf = requestAnimationFrame(tick);
-          }
-
-          carousel.addEventListener('mouseenter', () => { paused = true; speed = 0; });
-          carousel.addEventListener('mouseleave', () => { paused = false; });
-          carousel.addEventListener('touchstart', () => { paused = true;  speed = 0; }, { passive: true });
-          carousel.addEventListener('touchend',   () => { paused = false; }, { passive: true });
-
-          carousel.style.scrollSnapType = 'none';
-          carousel.style.overflowX = 'hidden';
-
-          raf = requestAnimationFrame(tick);
-        })();
-      </script>
     </div>
   `;
+
+  // ── Mobile menu ──────────────────────────────────────────────
+  const mobileMenuBtn  = document.getElementById('mobile-menu-btn');
+  const mobileMenu     = document.getElementById('mobile-menu');
+  const mobileMenuClose = document.getElementById('mobile-menu-close');
+  const mobileLinks    = document.querySelectorAll<HTMLElement>('.mobile-link');
+
+  function openMobileMenu() {
+    mobileMenu!.classList.remove('hidden');
+    mobileMenu!.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileMenu() {
+    mobileMenu!.classList.add('hidden');
+    mobileMenu!.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  mobileMenuBtn?.addEventListener('click', openMobileMenu);
+  mobileMenuClose?.addEventListener('click', closeMobileMenu);
+  mobileLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+
+  // ── Smooth scroll ─────────────────────────────────────────────
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (this: HTMLAnchorElement, e: Event) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href')!);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // ── Intersection Observer for fade-in ─────────────────────────
+  const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        (entry.target as HTMLElement).classList.add('opacity-100', 'translate-y-0');
+        (entry.target as HTMLElement).classList.remove('opacity-0', 'translate-y-8');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section').forEach(section => {
+    (section as HTMLElement).classList.add('transition-opacity', 'transition-transform', 'duration-700');
+    observer.observe(section);
+  });
+
+  // ── Features carousel (back and forth) ───────────────────────
+  (function () {
+    const carousel = document.getElementById('features-carousel');
+    if (!carousel) return;
+
+    const BASE_SPEED = 0.65;
+    let speed = 0;
+    let direction = 1;
+    let paused = false;
+
+    function getMaxScroll() {
+      return carousel.scrollWidth - carousel.clientWidth;
+    }
+
+    function tick() {
+      if (!paused) {
+        speed += (BASE_SPEED - speed) * 0.08;
+        carousel.scrollLeft += speed * direction;
+        const max = getMaxScroll();
+        if (direction === 1 && carousel.scrollLeft >= max) {
+          direction = -1; carousel.scrollLeft = max;
+        } else if (direction === -1 && carousel.scrollLeft <= 0) {
+          direction = 1; carousel.scrollLeft = 0;
+        }
+      }
+      requestAnimationFrame(tick);
+    }
+
+    carousel.addEventListener('mouseenter', () => { paused = true;  speed = 0; });
+    carousel.addEventListener('mouseleave', () => { paused = false; });
+    carousel.addEventListener('touchstart', () => { paused = true;  speed = 0; }, { passive: true });
+    carousel.addEventListener('touchend',   () => { paused = false; },            { passive: true });
+
+    carousel.style.scrollSnapType = 'none';
+    carousel.style.overflowX = 'hidden';
+    requestAnimationFrame(tick);
+  })();
 }
