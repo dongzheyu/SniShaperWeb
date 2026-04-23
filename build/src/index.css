@@ -256,3 +256,19 @@ section {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px -8px rgba(249, 115, 22, 0.15);
 }
+
+/* Hero secondary button hover feedback */
+.hero-secondary-btn {
+  transition: border-color 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.hero-secondary-btn:hover {
+  border-color: #f97316 !important;
+  color: #f97316 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px -6px rgba(249, 115, 22, 0.25);
+}
+
+.hero-secondary-btn:active {
+  transform: translateY(0);
+}
