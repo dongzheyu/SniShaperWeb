@@ -10,7 +10,7 @@ const zh: Translations = {
   nav_download: '下载',
 
   // Hero
-  hero_badge: 'v1.25 Windows 原生应用',
+  hero_badge: 'v1.26 Windows 原生应用',
   hero_desc: '专为复杂网络环境设计的本地代理工具。TLS 分片、QUIC 重建、ECH 注入 — 让你的流量在封锁网络中持续可用。',
   hero_btn_download: '立即下载',
   hero_btn_tech: '了解技术原理',
@@ -26,7 +26,7 @@ const zh: Translations = {
   adv1_title: '无需外部代理节点',
   adv1_desc: '直接利用 Cloudflare 全球 CDN 网络作为出口，无节点订阅费用，无中转服务器运维负担。',
   adv2_title: '多协议协同，覆盖面广',
-  adv2_desc: 'TLS-RF、ECH、QUIC、WARP 四种模式灵活切换，绑定不同策略应对不同封锁场景，兼容性极强。',
+  adv2_desc: 'TLS-RF、ECH、QUIC 多种模式灵活切换，绑定不同策略应对不同封锁场景，兼容性极强。',
   adv3_title: '原生图形界面，真正易用',
   adv3_desc: '基于 Wails + React 构建的原生 Windows 应用，视觉清晰，操作直观，不再需要编辑配置文件。',
 
@@ -54,8 +54,8 @@ const zh: Translations = {
   feat1_desc: '内置 GFWList 规则集，数万个被封锁域名开箱即通。',
   feat2_title: 'CF 优选 IP',
   feat2_desc: '自动从 Cloudflare 全球节点池中挑选延迟最低的节点。',
-  feat3_title: 'WARP Masque',
-  feat3_desc: '通过 WARP 隧道传输流量，Masque 协议提供额外保护。',
+  feat3_title: 'DNS 上游',
+  feat3_desc: '支持配置 DNS 上游服务器，配合域名绕过功能，智能解析 DNS 请求。',
   feat4_title: 'TUN 模式',
   feat4_desc: '虚拟网卡实现全局流量代理，所有应用无需配置即可使用。',
   feat5_title: 'JSON 规则',
@@ -64,8 +64,8 @@ const zh: Translations = {
   feat6_desc: '内置 MITM 代理 CA 证书安装向导，一键完成。',
   feat7_title: '延迟测试',
   feat7_desc: '内置节点测速，智能选择最优路径。',
-  feat8_title: '托盘运行',
-  feat8_desc: '最小化至系统托盘，后台静默运行，不占用任务栏。',
+  feat8_title: '多平台支持',
+  feat8_desc: '支持 Discord、Twitch 和 XChat 等平台的智能分流和代理规则。',
 
   // FAQ
   faq_title: '常见问题',
@@ -123,6 +123,16 @@ const zh: Translations = {
   cl_subtitle: '持续迭代，不断优化体验',
   cl_latest: '最新发行版',
   cl_more: '更多版本见更新日志',
+  cl126_title: 'DNS 上游 & 平台支持增强',
+  cl126_l1: '支持 DNS 上游服务器配置，配合域名绕过功能',
+  cl126_l2: 'QUIC 和 ECH 模式组合使用支持',
+  cl126_l3: '集成 Meta 平台专属 ECH 支持',
+  cl126_l4: '界面全面支持英文语言',
+  cl126_l5: '移除内置 WARP 支持',
+  cl126_l6: '修复大量已知问题，解决配置不一致',
+  cl126_l7: '升级部分依赖，降低轮询频率优化性能',
+  cl126_l8: '规则编辑页面智能显示，根据当前模式只显示相关选项',
+  cl126_l9: '实现 Discord、Twitch 和 XChat 支持',
   cl125_title: '增加 TUN 模式支持',
   cl125_l1: '增加 TUN 模式支持',
   cl125_l2: '增加一批网站适配',
@@ -151,7 +161,7 @@ const zh: Translations = {
   // Download
   dl_title: '准备掌控流量了吗？',
   dl_desc: '下载 SniShaper Windows 版本。开源免费，无需注册。',
-  dl_btn: '下载 Windows x64 (v1.25)',
+  dl_btn: '下载 Windows x64 (v1.26)',
   dl_win: 'Windows 10/11',
   dl_gui: '图形界面',
   dl_open: '开源项目',
@@ -175,6 +185,16 @@ const zh: Translations = {
   mob_tech: '核心技术',
   mob_faq: '常见问题',
   mob_download: '下载',
+
+  // Download Modal
+  modal_title: '选择下载方式',
+  modal_zoho: '网盘下载',
+  modal_zoho_desc: '通过 Zoho WorkDrive 网盘下载',
+  modal_github: 'GitHub 下载',
+  modal_github_desc: '从 GitHub Releases 页面下载',
+  modal_direct: '直接下载',
+  modal_direct_desc: '使用直链下载（可能不稳定）',
+  modal_close: '关闭',
 };
 
 const en: Translations = {
@@ -185,7 +205,7 @@ const en: Translations = {
   nav_download: 'Download',
 
   // Hero
-  hero_badge: 'v1.25 Windows Native App',
+  hero_badge: 'v1.26 Windows Native App',
   hero_desc: 'A local proxy tool purpose-built for complex network environments. TLS fragmentation, QUIC reconstruction, ECH injection — keep your traffic accessible even in heavily restricted networks.',
   hero_btn_download: 'Download Now',
   hero_btn_tech: 'How It Works',
@@ -201,7 +221,7 @@ const en: Translations = {
   adv1_title: 'No External Proxy Nodes Required',
   adv1_desc: "Leverages Cloudflare's global CDN network directly as the exit point. No subscription fees, no server maintenance burden.",
   adv2_title: 'Multi-Protocol Coverage',
-  adv2_desc: 'Four modes — TLS-RF, ECH, QUIC, WARP — switching flexibly to match different censorship scenarios with excellent compatibility.',
+  adv2_desc: 'TLS-RF, ECH, QUIC modes switching flexibly to match different censorship scenarios with excellent compatibility.',
   adv3_title: 'Native GUI — Truly Easy to Use',
   adv3_desc: 'Built with Wails + React as a native Windows application. Clean visuals, intuitive operation — no config file editing required.',
 
@@ -229,8 +249,8 @@ const en: Translations = {
   feat1_desc: 'Built-in GFWList rule set — tens of thousands of blocked domains work out of the box.',
   feat2_title: 'CF IP Picker',
   feat2_desc: "Automatically selects the lowest-latency node from Cloudflare's global IP pool.",
-  feat3_title: 'WARP Masque',
-  feat3_desc: 'Routes traffic through WARP tunnels with Masque protocol providing an extra layer of protection.',
+  feat3_title: 'DNS Upstreams',
+  feat3_desc: 'Configure DNS upstream servers with domain bypass support for intelligent DNS resolution.',
   feat4_title: 'TUN Mode',
   feat4_desc: 'Virtual network adapter proxies all traffic system-wide — no per-app configuration needed.',
   feat5_title: 'JSON Rules',
@@ -239,8 +259,8 @@ const en: Translations = {
   feat6_desc: 'Built-in MITM proxy CA certificate installation wizard — one click to complete setup.',
   feat7_title: 'Latency Test',
   feat7_desc: 'Built-in node speed testing with intelligent optimal path selection.',
-  feat8_title: 'System Tray',
-  feat8_desc: 'Minimizes to the system tray for silent background operation without cluttering the taskbar.',
+  feat8_title: 'Platform Support',
+  feat8_desc: 'Smart routing and proxy rules for Discord, Twitch, and XChat platforms.',
 
   // FAQ
   faq_title: 'FAQ',
@@ -298,6 +318,16 @@ const en: Translations = {
   cl_subtitle: 'Continuously iterating and improving the experience',
   cl_latest: 'Latest Release',
   cl_more: 'Full changelog',
+  cl126_title: 'DNS Upstreams & Platform Support',
+  cl126_l1: 'Support for DNS upstream servers with domain bypass features',
+  cl126_l2: 'Combined operation of QUIC and ECH modes',
+  cl126_l3: 'Integrated specific ECH support for Meta platforms',
+  cl126_l4: 'Full English language support across the interface',
+  cl126_l5: 'Removed built-in WARP support',
+  cl126_l6: 'Resolved numerous issues and configuration inconsistencies',
+  cl126_l7: 'Upgraded dependencies and reduced polling frequency',
+  cl126_l8: 'Rule editing page now shows only relevant options based on current mode',
+  cl126_l9: 'Implemented support for Discord, Twitch, and XChat',
   cl125_title: 'Added TUN Mode Support',
   cl125_l1: 'Added TUN mode support',
   cl125_l2: 'Expanded website compatibility list',
@@ -326,7 +356,7 @@ const en: Translations = {
   // Download
   dl_title: 'Ready to Take Control of Your Traffic?',
   dl_desc: 'Download SniShaper for Windows. Open source, free, no registration required.',
-  dl_btn: 'Download Windows x64 (v1.25)',
+  dl_btn: 'Download Windows x64 (v1.26)',
   dl_win: 'Windows 10/11',
   dl_gui: 'GUI',
   dl_open: 'Open Source',
@@ -350,6 +380,16 @@ const en: Translations = {
   mob_tech: 'Core Tech',
   mob_faq: 'FAQ',
   mob_download: 'Download',
+
+  // Download Modal
+  modal_title: 'Choose Download Method',
+  modal_zoho: 'Cloud Drive',
+  modal_zoho_desc: 'Download via Zoho WorkDrive',
+  modal_github: 'GitHub',
+  modal_github_desc: 'Download from GitHub Releases',
+  modal_direct: 'Direct Link',
+  modal_direct_desc: 'Direct download link (may be unstable)',
+  modal_close: 'Close',
 };
 
 // ── Language state ───────────────────────────────────────────────────────────
@@ -789,22 +829,26 @@ export function initApp(): void {
               <div class="absolute -left-2 top-0 w-4 h-4 bg-snip-orange rounded-full"></div>
               <div class="space-y-3">
                 <div class="flex items-center gap-3 flex-wrap">
-                  <span class="px-3 py-1 bg-snip-orange text-white rounded-full text-sm font-bold">v1.25</span>
+                  <span class="px-3 py-1 bg-snip-orange text-white rounded-full text-sm font-bold">v1.26</span>
                   <span class="px-2 py-0.5 bg-snip-orange/20 text-snip-orange rounded text-xs font-medium" data-i18n="cl_latest">${T.cl_latest}</span>
                 </div>
-                <h3 class="text-lg font-bold" data-i18n="cl125_title">${T.cl125_title}</h3>
+                <h3 class="text-lg font-bold" data-i18n="cl126_title">${T.cl126_title}</h3>
                 <ul class="space-y-2 text-snip-muted text-sm">
-                  ${[1,2,3].map(n => `<li class="flex items-start gap-2"><span class="text-snip-orange shrink-0">-</span><span data-i18n="cl125_l${n}">${T[`cl125_l${n}`]}</span></li>`).join('')}
+                  ${[1,2,3,4,5,6,7,8,9].map(n => `<li class="flex items-start gap-2"><span class="text-snip-orange shrink-0">-</span><span data-i18n="cl126_l${n}">${T[`cl126_l${n}`]}</span></li>`).join('')}
                 </ul>
               </div>
             </div>
-            ${[['124','stable'],['122',''],['121',''],['11x','final'],['10','']].map(([ver,tag]) => `
+            ${[['125',''],['124','stable'],['122',''],['121',''],['11x','final'],['10','']].map(([ver,tag]) => {
+              const displayVer = ver === '10' ? '1.0' : ver === '11x' ? '1.1' : `1.${ver.slice(1)}`;
+              return `
             <div class="relative pl-8 border-l-2 border-snip-gray-light">
               <div class="absolute -left-2 top-0 w-4 h-4 bg-snip-gray-light rounded-full"></div>
               <div class="space-y-3">
-                <span class="px-3 py-1 bg-snip-gray text-snip-muted rounded-full text-sm font-bold">v1.${ver}${tag ? '-'+tag : ''}</span>
+                <span class="px-3 py-1 bg-snip-gray text-snip-muted rounded-full text-sm font-bold">v${displayVer}${tag ? '-'+tag : ''}</span>
                 <h3 class="text-lg font-bold" data-i18n="cl${ver}_title">${T[`cl${ver}_title`]}</h3>
                 <ul class="space-y-2 text-snip-muted text-sm">
+                  ${ver==='126'?[1,2,3,4,5,6,7,8,9].map(n=>`<li class="flex items-start gap-2"><span class="text-snip-orange shrink-0">-</span><span data-i18n="cl126_l${n}">${T[`cl126_l${n}`]}</span></li>`).join(''):''}
+                  ${ver==='125'?[1,2,3].map(n=>`<li class="flex items-start gap-2"><span class="text-snip-orange shrink-0">-</span><span data-i18n="cl125_l${n}">${T[`cl125_l${n}`]}</span></li>`).join(''):''}
                   ${ver==='124'?[1,2,3,4].map(n=>`<li class="flex items-start gap-2"><span class="text-snip-orange shrink-0">-</span><span data-i18n="cl124_l${n}">${T[`cl124_l${n}`]}</span></li>`).join(''):''}
                   ${ver==='122'?[1,2].map(n=>`<li class="flex items-start gap-2"><span class="text-snip-orange shrink-0">-</span><span data-i18n="cl122_l${n}">${T[`cl122_l${n}`]}</span></li>`).join(''):''}
                   ${ver==='121'?[1,2].map(n=>`<li class="flex items-start gap-2"><span class="text-snip-orange shrink-0">-</span><span data-i18n="cl121_l${n}">${T[`cl121_l${n}`]}</span></li>`).join(''):''}
@@ -812,7 +856,7 @@ export function initApp(): void {
                   ${ver==='10'?'<li class="flex items-start gap-2"><span class="text-snip-orange shrink-0">-</span><span data-i18n="cl10_l1">${T.cl10_l1}</span></li>':''}
                 </ul>
               </div>
-            </div>`).join('')}
+            </div>`;}).join('')}
             <div class="text-center pt-4"><span class="text-snip-muted text-sm" data-i18n="cl_more">${T.cl_more}</span></div>
           </div>
         </div>
@@ -826,12 +870,12 @@ export function initApp(): void {
             <h2 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="dl_title">${T.dl_title}</h2>
             <p class="text-snip-muted mb-10 max-w-xl mx-auto" data-i18n="dl_desc">${T.dl_desc}</p>
             <div class="flex flex-wrap justify-center gap-4 mb-8">
-              <a href="https://files.zohopublic.com.cn/public/workdrive-public/download/kki5t6579775a6e7b4fdaa6a78c03ae307158?x-cli-msg=%7B%22linkId%22%3A%221GumWstoV3X-35NGn%22%2C%22isFileOwner%22%3Afalse%2C%22version%22%3A%221.0%22%2C%22isWDSupport%22%3Afalse%7D" class="group relative px-8 py-4 bg-snip-orange text-white font-semibold rounded-xl overflow-hidden transition-all hover:scale-105 glow-orange">
+              <button id="download-btn" class="group relative px-8 py-4 bg-snip-orange text-white font-semibold rounded-xl overflow-hidden transition-all hover:scale-105 glow-orange cursor-pointer">
                 <span class="relative z-10 flex items-center gap-2">
                   <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
                   <span data-i18n="dl_btn">${T.dl_btn}</span>
                 </span>
-              </a>
+              </button>
             </div>
             <div class="flex items-center justify-center gap-6 text-sm text-snip-muted">
               <span class="flex items-center gap-2"><span class="w-2 h-2 bg-green-400 rounded-full"></span><span data-i18n="dl_win">${T.dl_win}</span></span>
@@ -879,6 +923,48 @@ export function initApp(): void {
         </div>
       </footer>
 
+      <!-- Download Modal -->
+      <div id="download-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-snip-dark rounded-2xl border border-snip-gray-light max-w-lg w-full p-8 relative">
+          <button id="download-modal-close" class="absolute top-4 right-4 p-2 text-snip-muted hover:text-snip-orange transition-colors">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
+          <h3 class="text-2xl font-bold mb-6" data-i18n="modal_title">${T.modal_title}</h3>
+          <div class="space-y-4">
+            <a href="https://workdrive.zohopublic.com.cn/external/84487a84ff53bc86084a07edf87e38eca39989f941a6c7c04c8391860b689a34/download" target="_blank" class="download-option flex items-start gap-4 p-4 bg-snip-gray rounded-xl border border-snip-gray-light hover:border-snip-orange/50 transition-all group">
+              <div class="w-10 h-10 bg-snip-orange/10 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-snip-orange/20 transition-colors">
+                <svg class="w-5 h-5 text-snip-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
+              </div>
+              <div>
+                <div class="font-medium mb-1" data-i18n="modal_zoho">${T.modal_zoho}</div>
+                <div class="text-sm text-snip-muted" data-i18n="modal_zoho_desc">${T.modal_zoho_desc}</div>
+              </div>
+            </a>
+            <a href="https://github.com/SniShaper/SniShaper/releases/download/v1.26/SniShaper-Windows-1.26.7z" target="_blank" class="download-option flex items-start gap-4 p-4 bg-snip-gray rounded-xl border border-snip-gray-light hover:border-snip-orange/50 transition-all group">
+              <div class="w-10 h-10 bg-snip-orange/10 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-snip-orange/20 transition-colors">
+                <svg class="w-5 h-5 text-snip-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 2.02.837.58-.16 1.201-.24 1.82-.242.618.002 1.239.082 1.82.242 1.012-1.159 2.02-.837 2.02-.837.652 1.652.241 2.873.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div>
+                <div class="font-medium mb-1" data-i18n="modal_github">${T.modal_github}</div>
+                <div class="text-sm text-snip-muted" data-i18n="modal_github_desc">${T.modal_github_desc}</div>
+              </div>
+            </a>
+            <a href="https://files.zohopublic.com.cn/public/workdrive-public/download/oqvg1b2490138595c4ac6b80bef201cc6e6d4?x-cli-msg=%7B%22linkId%22%3A%221GumWstoXFf-35NGn%22%2C%22isFileOwner%22%3Afalse%2C%22version%22%3A%221.0%22%2C%22isWDSupport%22%3Afalse%7D" target="_blank" class="download-option flex items-start gap-4 p-4 bg-snip-gray rounded-xl border border-snip-gray-light hover:border-snip-orange/50 transition-all group">
+              <div class="w-10 h-10 bg-snip-orange/10 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-snip-orange/20 transition-colors">
+                <svg class="w-5 h-5 text-snip-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+              </div>
+              <div>
+                <div class="font-medium mb-1" data-i18n="modal_direct">${T.modal_direct}</div>
+                <div class="text-sm text-snip-muted" data-i18n="modal_direct_desc">${T.modal_direct_desc}</div>
+              </div>
+            </a>
+          </div>
+          <div class="mt-6 text-center">
+            <button id="download-modal-close-btn" class="px-6 py-2 bg-snip-gray text-snip-muted rounded-lg hover:text-snip-orange transition-colors cursor-pointer" data-i18n="modal_close">${T.modal_close}</button>
+          </div>
+        </div>
+      </div>
+
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="fixed inset-0 bg-snip-dark/95 backdrop-blur-lg z-50 hidden flex-col items-center justify-center gap-8">
         <button id="mobile-menu-close" class="absolute top-6 right-6 p-2 text-snip-muted hover:text-snip-orange transition-colors">
@@ -906,6 +992,18 @@ export function initApp(): void {
   mobileMenuBtn?.addEventListener('click', openMobileMenu);
   mobileMenuClose?.addEventListener('click', closeMobileMenu);
   mobileLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+
+  // Download modal
+  const downloadBtn = document.getElementById('download-btn');
+  const downloadModal = document.getElementById('download-modal');
+  const downloadModalClose = document.getElementById('download-modal-close');
+  const downloadModalCloseBtn = document.getElementById('download-modal-close-btn');
+  function openDownloadModal() { downloadModal!.classList.remove('hidden'); downloadModal!.classList.add('flex'); document.body.style.overflow = 'hidden'; }
+  function closeDownloadModal() { downloadModal!.classList.add('hidden'); downloadModal!.classList.remove('flex'); document.body.style.overflow = ''; }
+  downloadBtn?.addEventListener('click', openDownloadModal);
+  downloadModalClose?.addEventListener('click', closeDownloadModal);
+  downloadModalCloseBtn?.addEventListener('click', closeDownloadModal);
+  downloadModal?.addEventListener('click', (e) => { if (e.target === downloadModal) closeDownloadModal(); });
 
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -940,19 +1038,19 @@ export function initApp(): void {
     function tick() {
       if (!paused) {
         speed += (BASE_SPEED - speed) * 0.08;
-        carousel.scrollLeft += speed * direction;
-        const max = carousel.scrollWidth - carousel.clientWidth;
-        if (direction === 1 && carousel.scrollLeft >= max) { direction = -1; carousel.scrollLeft = max; }
-        else if (direction === -1 && carousel.scrollLeft <= 0) { direction = 1; carousel.scrollLeft = 0; }
+        carousel!.scrollLeft += speed * direction;
+        const max = carousel!.scrollWidth - carousel!.clientWidth;
+        if (direction === 1 && carousel!.scrollLeft >= max) { direction = -1; carousel!.scrollLeft = max; }
+        else if (direction === -1 && carousel!.scrollLeft <= 0) { direction = 1; carousel!.scrollLeft = 0; }
       }
       requestAnimationFrame(tick);
     }
-    carousel.addEventListener('mouseenter', () => { paused = true; speed = 0; });
-    carousel.addEventListener('mouseleave', () => { paused = false; });
-    carousel.addEventListener('touchstart', () => { paused = true; speed = 0; }, { passive: true });
-    carousel.addEventListener('touchend',   () => { paused = false; }, { passive: true });
-    carousel.style.scrollSnapType = 'none';
-    carousel.style.overflowX = 'hidden';
+    carousel!.addEventListener('mouseenter', () => { paused = true; speed = 0; });
+    carousel!.addEventListener('mouseleave', () => { paused = false; });
+    carousel!.addEventListener('touchstart', () => { paused = true; speed = 0; }, { passive: true });
+    carousel!.addEventListener('touchend',   () => { paused = false; }, { passive: true });
+    carousel!.style.scrollSnapType = 'none';
+    carousel!.style.overflowX = 'hidden';
     requestAnimationFrame(tick);
   })();
 }
