@@ -115,11 +115,25 @@ npm run preview
 我们呼吁广大社区用户保持理性，共同维护良好的开源交流氛围。SniShaper 的未来将属于所有热爱技术的贡献者。
 
 **JetCPP Team**
+
+### 补充声明：致社区与开发者的一封信
+
+作为新加入的维护方，JetCPP Team 最后想对社区和所有关注本项目的开发者说几句心里话。
+
+开源世界的魅力，在于技术的共享与思想的碰撞，而非无休止的争端与消耗。过去发生的一切，无论对错，都已属于过去。我们真诚地希望各位能放下对过往恩怨的纠结，停止在情绪与口舌上的无谓消耗。
+
+技术的进步需要纯粹的热爱与专注。我们呼吁大家将宝贵的精力重新投入到代码与创新之中，用优秀的作品说话，共同营造一个更加健康、积极、专注于技术本身的开源环境。
+
+让我们翻过这一页，好好开发，保持对技术的热爱，用实力与行动去赢得尊重。
+
+**JetCPP Team**
+---
+代码重塑世界 · 创新驱动未来
 ---
 
 ## English
 
-### Overview
+### 概况
 
 This repository contains the source code for the **SniShaper** official landing page. SniShaper is a Windows-native network proxy tool that uses SNI-based traffic shaping to help users bypass SNI-based censorship and achieve freer, more stable internet access.
 
@@ -243,3 +257,19 @@ From now on, the JetCPP Team will work with the SniShaper Team on the healthy de
 We call on the majority of community users to remain rational and jointly maintain a good open source communication atmosphere. The future of SniShaper will belong to all contributors who love technology.
 
 **JetCPP Team**
+
+
+### Supplemental Statement: A letter to the community and developers
+
+As a new maintainer, the JetCPP Team would like to say a few words to the community and all the developers who are interested in this project.
+
+The charm of the open source world lies in the sharing of technologies and the collision of ideas, rather than endless disputes and consumption. Everything that happened in the past, whether right or wrong, is already in the past. We sincerely hope that you will let go of your entanglement in past grievances and stop unnecessary consumption of emotions and words.
+
+Technological advancements require pure love and focus. We call on everyone to reinvest their valuable energy into code and innovation, and to speak with great work to create a healthier, more active, and focused open source environment for the technology itself.
+
+Let's turn the page, develop well, maintain our love for technology, and win respect with strength and action.
+
+**JetCPP Team**
+---
+Code Reinvents the World · Innovation drives the future
+---
