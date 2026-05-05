@@ -1,6 +1,4 @@
-# SniShaper — Landing Page
-
-> 官网落地页 · Official Website
+# SniShaper
 
 ---
 
