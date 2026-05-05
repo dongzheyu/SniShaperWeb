@@ -93,6 +93,30 @@ npm run preview
 - 所有页面修改均在 `build/src/main.ts` 中进行
 - 样式修改在 `build/src/style.css` 或 `build/src/index.css` 中进行
 
+### 免责声明
+#### 关于 JetCPP Team 参与维护 SniShaper 项目的声明
+
+**发布方：** JetCPP Team
+**日期：** 2026年5月5日
+
+近期，SniShaper 项目在社区中引发了一定的关注与争议。鉴于项目原开发者曾宣布退出，**JetCPP Team 正式宣布介入，目前将与 SniShaper Team 共同维护 SniShaper 项目**。
+
+作为新加入的维护团队，JetCPP Team 特此作出以下严正说明：
+
+##### 一、 立场与身份澄清
+**JetCPP Team 与此前 SniShaper 项目发生的所有历史争议、社群摩擦及相关事件均无任何关系。**
+
+我们介入的初衷纯粹是认可 SniShaper 项目的技术价值，希望能为社区用户提供一个稳定、持续更新的工具。我们未参与过往的任何争论，也不对过往的任何言论和行为负责。
+
+##### 二、 维护目标与承诺
+从即日起，JetCPP Team 将与 SniShaper Team 共同致力于项目的健康发展。我们的核心目标如下：
+- **专注技术本身**：我们将把精力完全投入到代码的重构、优化与核心功能的稳定性上，摆脱历史包袱。
+- **建立良性社区**：我们倡导理性、友好的技术交流环境，拒绝任何情绪化的攻击与无意义的争端。
+- **坚持透明开发**：项目未来的所有更新与规划，都将基于公开、透明的原则进行。
+
+我们呼吁广大社区用户保持理性，共同维护良好的开源交流氛围。SniShaper 的未来将属于所有热爱技术的贡献者。
+
+**JetCPP Team**
 ---
 
 ## English
@@ -189,3 +213,35 @@ npm run preview
 ## License
 
 MIT — see [LICENSE](./LICENSE)
+
+### Disclaimer
+
+#### Statement on JetCPP Team’s participation in maintaining the SniShaper project
+
+**Published by:** JetCPP Team
+
+**Date:** May 5, 2026
+
+Recently, the SniShaper project has caused a certain amount of attention and controversy in the community. In view of the fact that the original developer of the project announced his withdrawal, **JetCPP Team officially announced its intervention and will currently maintain the SniShaper project together with the SniShaper Team**.
+
+As a newly joined maintenance team, JetCPP Team hereby makes the following solemn statement:
+
+##### 1. Clarification of position and identity
+
+**JetCPP Team has nothing to do with any historical controversies, community frictions and related incidents that occurred with the previous SniShaper project. **
+
+The original intention of our intervention is purely to recognize the technical value of the SniShaper project, and hope to provide a stable and continuously updated tool for community users. We have not participated in any past controversies and are not responsible for any past remarks and actions.
+
+##### 2. Maintain goals and commitments
+
+From now on, the JetCPP Team will work with the SniShaper Team on the healthy development of the project. Our core goals are as follows:
+
+- **Focus on the technology itself**: We will devote all our energy to code reconstruction, optimization and the stability of core functions, and get rid of historical baggage.
+
+- **Establish a benign community**: We advocate a rational and friendly technical communication environment and reject any emotional attacks and meaningless disputes.
+
+- **Adhere to transparent development**: All future updates and planning of the project will be based on the principles of openness and transparency.
+
+We call on the majority of community users to remain rational and jointly maintain a good open source communication atmosphere. The future of SniShaper will belong to all contributors who love technology.
+
+**JetCPP Team**
