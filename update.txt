@@ -1,2 +1,2 @@
 1.26
-https://github.chenc.dev/https://github.com/SniShaper/SniShaper/releases/download/v1.26/SniShaper-Windows-1.26.7z
+https://github.com/SniShaper/SniShaper/releases/tag/v1.26
