@@ -445,7 +445,7 @@ export function initApp(): void {
       <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4 md:px-12">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-3">
-            <img src="/logo.png" alt="SniShaper" class="w-10 h-10" />
+            <img src="./logo.png" alt="SniShaper" class="w-10 h-10" />
             <span class="text-lg font-semibold tracking-tight">SniShaper</span>
           </div>
           <div class="hidden md:flex items-center gap-8 text-sm text-snip-muted">
@@ -894,7 +894,7 @@ export function initApp(): void {
           <div class="grid md:grid-cols-4 gap-12 mb-12">
             <div class="md:col-span-2">
               <div class="flex items-center gap-3 mb-4">
-                <img src="/logo.png" alt="SniShaper" class="w-10 h-10" />
+                <img src="./logo.png" alt="SniShaper" class="w-10 h-10" />
                 <span class="font-bold text-lg" data-i18n="footer_brand">${T.footer_brand}</span>
               </div>
               <p class="text-snip-muted text-sm max-w-md leading-relaxed mb-4" data-i18n="footer_desc">${T.footer_desc}</p>
